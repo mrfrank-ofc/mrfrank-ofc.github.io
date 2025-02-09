@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://i.ibb.co/6tg4kGs/mrfrankofc.jpg">
+  <title>Darrell Mucheri ( Mr Frank OFC )</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+      
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #0f172a;
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+    }
+
+    #stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 1.5s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    .navbar {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(25px);
+    }
+
+    .typing-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+      border-right: 2px solid white;
+      width: 20ch;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 20ch;
+      }
+    }
+
+    @keyframes blink {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
+      }
+    }
+
+    .project-card {
+      background: rgba(30, 41, 59, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border-color: rgba(147, 197, 253, 0.5);
+    }
+    footer {
+  background-color: #1f2937;  /* Dark background */
+  color: #e5e7eb;  /* Light text color */
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+footer strong {
+  color: #fbbf24; /* Highlight Mr Frank in yellow */
+}
+section {
+  background-color: #111827; /* Dark background for the section */
+  color: #e5e7eb; /* Light text color */
+}
+
+h2 {
+  color: #e5e7eb;
+}
+
+div {
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #fbbf24; /* Example color on hover */
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+.bg-green-500 {
+  background-color: #10b981;
+}
+
+.bg-purple-500 {
+  background-color: #9333ea;
+}
+
+.bg-blue-700 {
+  background-color: #1d4ed8;
+}
+.view-more-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #0072ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #005f7c;
+  transform: scale(1.05);
+}
+
+  /* Themed Button */
+  #play-button {
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    color: #1e293b;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #play-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    transition: all 0.3s ease;
+  }
+
+  #play-button:hover::after {
+    left: 100%;
+  }
+
+  #play-button:hover {
+    background: linear-gradient(45deg, #f59e0b, #fbbf24);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  #play-button:active {
+    transform: scale(0.95);
+  }
+/* Skills Section */
+  .skills-section {
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(45deg, #1e293b, #0f172a);
+    color: #fbbf24;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+  }
+
+  .skills-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .skill {
+    margin: 15px 0;
+  }
+
+  .skill-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .skill-bar {
+    background: #334155;
+    border-radius: 5px;
+    height: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .skill-bar .progress {
+    height: 100%;
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    width: 0; /* Start with 0% */
+    transition: width 2s ease;
+  }
+/* Add this to your styles */
+.testimonial-card {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0); /* Original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up slightly */
+  }
+}
+.project-card {
+  opacity: 0;
+  transform: translateX(-50px); /* Start position off-screen */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-card.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Final position */
+    }
+
+/* Floating Animation for Profile Picture */
+    @keyframes floatProfile {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .floating-profile {
+      animation: floatProfile 4s ease-in-out infinite;
+    }
+    
+
+  </style>
+</head>
+  
+<body class="text-gray-200">
+  <!-- Star Background -->
+  <div id="stars"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50 px-6 py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <p class="text-xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-500 bg-clip-text text-transparent">
+        &lt; / Darrell Mucheri &gt;
+      </p>
+      <button id="hamburger" class="block md:hidden text-white">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <header class="py-24 px-6 text-center">
+    <div class="container mx-auto">
+      <img src="https://i.ibb.co/8DcJ2qsC/mrfrankofc.jpg" alt="Profile" class="mx-auto mb-6 rounded-full w-32 h-32 shadow-lg floating-profile">
+      <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">        
+       Welcome !
+      </h1>
+      <p class="typing-text mt-4 text-gray-400 text-lg">
+        My Name Is Darrell Mucheri
+      </p>
+      <h5 class="text-1xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">
+        A Front End Dev From Zimbabwe 
+        </h5>
+    </div>
+  </header>
+
+
+<!-- Total Requests -->
+    <div class="stats-card rounded-xl p-6 text-center">
+      <p class="text-gray-400" style="color: rgb(177,48,48)">
+        <b>Todays Visitor Number</b>
+       <div id="visitor-number"></div> 
+      </p>
+       </div>
+
+<!--<center><button id="play-button" onclick="playAudio()">
+  View Source Code
+</button></center>-->
+
+<audio id="auto-play-audio" preload="auto">
+  <source src="https://github.com/mrfrank-ofc/SUBZERO-MD-DATABASE/raw/refs/heads/main/audios/subzero-theone.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<section class="py-12 px-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg shadow-lg">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent mb-6">
+      Who Am I & My Vision
+    </h2>
+    <p class="text-gray-400 text-lg leading-relaxed">
+      I am <span class="text-yellow-400 font-semibold">Darrell Mucheri</span>, a highly innovated & curious young talented developer from Zimbabwe.
+      My main object is to turn my dreams into reality & solve complex problems through my creativuty
+      With a commitment to excellence and a passion for technology, I aim to revolutionize the way .
+    </p>
+  </div>
+</section>
+
+<div class="skills-section">
+  <h2>My Skills & Expertise</h2>
+  <div class="skill" data-percent="90">
+    <div class="skill-title">
+      JavaScript <span>90%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+  <div class="skill" data-percent="99.9">
+    <div class="skill-title">
+      HTML <span>99.9%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+  <div class="skill" data-percent="80">
+    <div class="skill-title">
+      CSS <span>80%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+  <div class="skill" data-percent="80">
+    <div class="skill-title">
+      Node.js <span>80%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+  <div class="skill" data-percent="85">
+    <div class="skill-title">
+      React.js <span>85%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+  <div class="skill" data-percent="20">
+    <div class="skill-title">
+      Python <span>20%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+  <div class="skill" data-percent="70">
+    <div class="skill-title">
+      MongoDB <span>70%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+  <div class="skill" data-percent="1">
+    <div class="skill-title">
+      Java <span>1%</span>
+    </div>
+    <div class="skill-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+</div>
+
+
+<section class="py-12 px-6 bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg shadow-lg">
+  <div class="container mx-auto text-center">
+    <h1 class="text-5xl font-bold bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent hover:scale-105 transform transition duration-300 ease-in-out mb-8">
+      My Exciting Projects
+    </h1>
+    <p class="text-gray-400 text-lg leading-relaxed">
+      Check out some of the innovative and impactful projects I have worked on. Each project is built with passion and precision to solve real-world problems.
+    </p>
+  </div>
+</section>
+
+
+
+
+  <!-- Projects Section -->
+  <main class="container mx-auto px-4 md:px-6 py-8">
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+      <!-- Project Card 1 -->
+      <div class="project-card rounded-xl p-6">
+        <img src="https://i.ibb.co/QY7xYZn/mrfrankofc.jpg" alt="YouTube ytmp3 API" class="mb-4 w-full rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Subzero AI</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          A cutting Edge Whatsapp robot to automate everything
+        </p>
+        <div class="flex justify-between">
+          <a href="https://tinyurl.com/subzero-pair" class="py-2 px-4 rounded text-white text-center bg-blue-500">Demo</a>
+          <a href="https://github.com/mrfrank-ofc/SUBZERO/" class="py-2 px-4 rounded text-white text-center bg-green-500">Source</a>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card rounded-xl p-6">
+        <img src="https://i.ibb.co/5K3GG2B/mrfrankofc.jpg" alt="YouTube ytmp4 API" class="mb-4 w-full rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">E Store</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          An Online Store to order items online.
+        </p>
+        <div class="flex justify-between">
+          <a href="https://e-commerce-mr-frank.vercel.app/" class="py-2 px-4 rounded text-white text-center bg-blue-500">Demo</a>
+          <a href="https://github.com/mrfrank-ofc/E-Commerce" class="py-2 px-4 rounded text-white text-center bg-green-500">Source</a>
+        </div>
+      </div>
+
+      <!-- Project Card 3-->
+      <div class="project-card rounded-xl p-6">
+        <img src="https://i.ibb.co/YBnFBQ9K/mrfrankofc.jpg" alt="YouTube ytmp4 API" class="mb-4 w-full rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">ChitChat </h3>
+        <p class="text-gray-400 text-sm mb-4">
+          An Online platforms to chat like Whatsapo.
+        </p>
+        <div class="flex justify-between">
+          <a href="https://chatify-test.onrender.com" class="py-2 px-4 rounded text-white text-center bg-blue-500">Demo</a>
+          <a href="https://github.com/mrfrank-ofc/chatify" class="py-2 px-4 rounded text-white text-center bg-green-500">Source</a>
+        </div>
+      </div>
+      
+      <!-- Project Card 4 -->
+      <div class="project-card rounded-xl p-6">
+        <img src="https://i.ibb.co/dLRKYfw/mrfrankofc.jpg" alt="YouTube ytmp4 API" class="mb-4 w-full rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Rest APIs</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Free Unlimited Request APIs for devs.
+        </p>
+        <div class="flex justify-between">
+          <a href="https://tinyurl.com/subzero-api" class="py-2 px-4 rounded text-white text-center bg-blue-500">Demo</a>
+          <a href="https://tinyurl.com/mrfrank-unavailable" class="py-2 px-4 rounded text-white text-center bg-green-500">Source</a>
+        </div>
+      </div>
+
+      <!-- Project Card 5 -->
+      <div class="project-card rounded-xl p-6">
+        <img src="https://i.ibb.co/BnHCzNX/mrfrankofc.jpg" alt="APK Downloader API" class="mb-4 w-full rounded-lg">
+        <h3 class="text-xl font-semibold mb-2">Dev Folio</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          An advanced Web Portfolio for Developers.
+        </p>
+        <div class="flex justify-between">
+          <a href="https://darrelmucheri.vercel.app" class="py-2 px-4 rounded text-white text-center bg-blue-500">Demo</a>
+          <a href="https://github.com/mrfrank-ofc/Darrell-s-Portfolio" class="py-2 px-4 rounded text-white text-center bg-green-500">Source</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <section class="projects">
+  <!-- View More Projects Button -->
+  <div class="view-more-container">
+    <a href="https://tinyurl.com/mrfrank-projects" class="view-more-btn">View More Projects</a>
+  </div>
+</section>
+
+    <!-- Achievements Section -->
+   <!-- achieves -->
+  <section class="py-12 px-6 bg-gray-800 text-gray-200 overflow-hidden">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-semibold text-transparent bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text mb-12">
+      📚 Education & 🏆 Achievements
+    </h2>
+
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+      <!-- Education Section -->
+      <div class="education-card transform translate-x-[-100%] opacity-0 transition-all duration-1000 ease-out max-w-md mx-auto p-6 rounded-lg bg-gray-900 shadow-lg">
+        <h3 class="text-2xl font-bold text-yellow-400 mb-4">🎓 Education</h3>
+        <p class="text-lg text-gray-400">
+          <strong>O Level (2021 - 2024)</strong><br>
+          St Mary's Secondary Chitungwiza
+        </p>
+        <p class="text-lg text-gray-400">
+          <strong>A Level (Currently Form 5 - Sciences)</strong><br>
+          St Mary's Secondary Chitungwiza
+        </p>
+      </div>
+
+      <!-- Achievements Section -->
+      <div class="achievements-card transform translate-x-[100%] opacity-0 transition-all duration-1000 ease-out max-w-md mx-auto p-6 rounded-lg bg-gray-900 shadow-lg">
+        <h3 class="text-2xl font-bold text-yellow-400 mb-4">🏅 Achievements</h3>
+        <ul class="text-lg text-gray-400 list-none">
+          <li>🥉 <strong>2023:</strong> Position 3 (District & Provincial) - National AIDS Council Quiz</li>
+          <li>🏅 <strong>2023:</strong> 5 Awards - Best Student in Maths, Computers, Geography, Shona & Biology</li>
+          <li>🥉 <strong>2024:</strong> Position 3 - Orate Africa Quiz (National Level)</li>
+          <li>🥈 <strong>2024:</strong> Position 2 - Old Mutual Book of African Records Quiz (Harare Province)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!--Tesstimonials--> 
+  
+  <section class="py-12 px-6 bg-gray-800 text-gray-200">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-semibold text-center text-transparent bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text mb-12">
+      What People Are Saying
+    </h2>
+
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card flex flex-col items-center text-center max-w-xs mx-auto p-6 rounded-lg bg-gray-900 shadow-lg">
+        <img src="https://i.ibb.co/k2FK0KX/mrfrankofc.jpg" alt="Darrell" class="w-32 h-32 rounded-full border-4 border-gradient-to-r from-yellow-400 to-pink-500 mb-4">
+        <p class="text-lg italic text-gray-400 mb-4">
+          "Darrell is an incredibly skilled developer. His work on the project was both professional and efficient. Truly amazing!"
+        </p>
+        <span class="font-semibold text-xl text-yellow-400">Takudzwa Mucheri</span>
+        <p class="text-gray-500">Software Engineer</p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card flex flex-col items-center text-center max-w-xs mx-auto p-6 rounded-lg bg-gray-900 shadow-lg">
+        <img src="https://i.ibb.co/99dYJxX/mrfrankofc.jpg" alt="Darrell" class="w-32 h-32 rounded-full border-4 border-gradient-to-r from-yellow-400 to-pink-500 mb-4">
+        <p class="text-lg italic text-gray-400 mb-4">
+          "I've worked with many developers, but Darrell stands out as one of the best. His dedication and passion for quality shine through every project."
+        </p>
+        <span class="font-semibold text-xl text-yellow-400">Frank Kumba</span>
+        <p class="text-gray-500">Web Designer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-16 px-6 bg-gray-800 text-gray-200">
+  <div class="container mx-auto text-center">
+    <!-- Email Me Section -->
+    <div class="mb-12">
+      <h2 class="text-4xl font-semibold text-transparent bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text mb-6">
+        Email Me
+      </h2>
+      <p class="text-lg mb-4">
+        Feel free to reach out to me for any inquiries, collaboration opportunities, or just to say hello! I'll get back to you as soon as possible.
+      </p>
+      <a href="mailto:darrelmucheri@gmail.com" class="px-6 py-3 text-white bg-gradient-to-r from-yellow-400 to-pink-500 rounded-lg text-lg">
+        Send Me an Email
+      </a>
+    </div>
+
+    <!-- Get in Touch Section -->
+    <div>
+      <h2 class="text-4xl font-semibold text-transparent bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text mb-6">
+        Get in Touch
+      </h2>
+      <p class="text-lg mb-4">
+        Connect with me on social media for updates, chats, and more!
+      </p>
+
+      <!-- Social Media Icons -->
+      <div class="flex justify-center gap-8">
+        <!-- GitHub -->
+        <a href="https://github.com/mrfrank-ofc" target="_blank" class="text-white text-3xl hover:text-yellow-400 transition-colors">
+          <i class="fab fa-github"></i>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/263719647303" target="_blank" class="text-white text-3xl hover:text-green-500 transition-colors">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- YouTube -->
+        <a href="https://youtube.com/@mrfr4nk" target="_blank" class="text-white text-3xl hover:text-red-500 transition-colors">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=100076324647092" target="_blank" class="text-white text-3xl hover:text-blue-600 transition-colors">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com/mrfrankofc" target="_blank" class="text-white text-3xl hover:text-pink-500 transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-center text-gray-200">
+  <div class="container mx-auto">
+    <p class="text-sm">
+      &copy; <span id="current-year"></span> — All Rights Reserved by <strong>Darrell Mucheri</strong>
+    </p>
+  </div>
+  </footer>
+
+ 
+  <script>
+    // Star Background Generator
+    const stars = document.getElementById('stars');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.width = `${Math.random() * 3 + 1}px`;
+      star.style.height = star.style.width;
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      stars.appendChild(star);
+    }
+
+    // Hamburger Menu (Placeholder for functionality)
+   /* const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => {
+      alert('Thank You For Reaching This Far, Its means a lot for me! \n\n Yours Truly😄\n Darrell Mucheri 🇿🇼');
+    });*/
+    const hamburger = document.getElementById('hamburger');
+hamburger.addEventListener('click', () => {
+  window.location.href = 'tools.html';
+});
+    
+    
+  // Get current year and update the footer
+  const currentYear = new Date().getFullYear();
+  document.getElementById('current-year').textContent = `${2022} - ${currentYear}`;
+
+
+let visitorNumber = localStorage.getItem('visitorNumber');
+
+if (visitorNumber === null) {
+  visitorNumber = 0;
+}
+
+document.getElementById('visitor-number').textContent = visitorNumber;
+
+visitorNumber++;
+
+localStorage.setItem('visitorNumber', visitorNumber);
+function playAudio() {
+    var audio = document.getElementById("auto-play-audio");
+    audio.play();
+  }
+
+// Detect when the section is in view and trigger animation
+document.addEventListener("DOMContentLoaded", () => {
+  const skills = document.querySelectorAll(".skill");
+
+  const animateSkills = () => {
+    skills.forEach((skill) => {
+      const progressBar = skill.querySelector(".progress");
+      const percentage = skill.getAttribute("data-percent");
+
+      const skillTop = skill.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (skillTop < windowHeight) {
+        progressBar.style.width = `${percentage}%`;
+      }
+    });
+  };
+
+  // Trigger animation on scroll
+  window.addEventListener("scroll", animateSkills);
+
+  // Trigger animation on load
+  animateSkills();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const projectCards = document.querySelectorAll(".project-card");
+
+  const slideInProjects = () => {
+    projectCards.forEach((card) => {
+      const cardTop = card.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (cardTop < windowHeight - 100) {
+        card.classList.add("slide-in");
+      }
+    });
+  };
+
+  // Trigger animation on scroll
+  window.addEventListener("scroll", slideInProjects);
+
+  // Trigger animation on page load (for cards already in view)
+  slideInProjects();
+});
+   
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      document.querySelector(".education-card").classList.remove("translate-x-[-100%]");
+      document.querySelector(".education-card").classList.remove("opacity-0");
+      document.querySelector(".achievements-card").classList.remove("translate-x-[100%]");
+      document.querySelector(".achievements-card").classList.remove("opacity-0");
+    }, 500);
+  });
+
+ 
+  </script>
+</body>
+</html>
